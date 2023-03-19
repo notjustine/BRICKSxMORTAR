@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>BRICKSxMORTAR: Frequently Asked Questions</title>
+        <meta charset="utf-8" lang="en"/> 
+        <meta name="author" content = "Justine Magbitang"/>
+        <meta name="keywords" description="fashion, custom clothing, Toronto, gender diversity, common questions, FAQ"/>
+        <meta name="description" content="Frequently asked questions about our studio space and services."/>
+        <link href="main.css" type="text/css" rel="stylesheet" media="all"/>
+        <script type="text/javascript" src="scripts/jquery-3.6.3.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("header p").click(function() {
+                    $("nav").toggleClass("slideDown");
+                });
+                
+                $("h3+p").hide();
+
+                // $("h3:nth-of-type(2)").click(function() {
+                //     $("h3:nth-of-type(2)+p").toggle(500);
+                // });
+
+                $("h3").click(function() {
+                    $(this).addClass("active");
+                    $("h3.active+p").toggle(500);
+                    $("h3.active").removeClass("active");
+                });
+            });
+            $(window).scroll(function() {
+                $("header").stop().animate({
+                    top: $(document).scrollTop()
+                }, 'slow');
+            });
+        </script>
+    </head>
+    
+    <body>
+        <div id="banner">
+            <p id="bgToggle">
+                <a href="#wrapper">Switch Text to Black on White</a>
+            </p>
+            <img id="logo" src="images/BRICKSxMORTAR_logo.png" alt="Bricks and Mortar logo"/>
+        </div>
+        
+        <div id="wrapper">
+            <header>
+                <p>menu</p>
+                <nav>
+                    <a class="menu" href="index.html" target="_self">OUR MISSION</a><br/>
+                    <a class="menu" href="story.html" target="_self">OUR STORY</a><br/>
+                    <a class="menu" href="#" target="_self">OUR SERVICES</a><br/>
+                    <a class="menu" href="#" target="_self">LOCATIONS</a><br/>
+                </nav>
+            </header>
+        
+            <center>
+                <span class="magenta agenda strobe">F.A.Q</span> 
+            </center>
+
+            <h3 style = "color:magenta">Do I need to make an appointment, or can I walk right in?</h3>
+            <p>
+                While our physical locations are open to the public to come in and explore our galleries, we do ask that you call or e-mail ahead of time if you're interested in a design consultation or a fitting. Just send us your name, a number we can reach you with, and a preferred date and time, using the e-mail link at the bottom of the page.
+            </p>
+
+            <h3 style = "color:magenta">Do I need to have my own fabric and materials picked out ahead of time?</h3>
+            <p>
+                No, that's all part of the fun and the customer experience. One of our talented designers will be happy to walk you through fabric samples, make recommendations, and place orders on your behalf for everything you need to create the perfect custom look.
+            </p>
+
+            <h3 style = "color:magenta">Do you make men's clothing?</h3>
+            <p>
+                Yes, we make clothing for all expressions of gender, whether that's cis-gendered men and women or a more androgynous look. We want clothing to be comfortable for our clients physically, emotionally and psychologically.
+            </p>
+
+            <h3 style = "color:magenta">What if I can't pay for everything up front?</h3>
+            <p>
+                We know that custom clothing can be expensive, but it's also an investment in you. That's why we're more than willing to work with you to devise a payment plan for your custom outfit. We offer 2, 4 and 6-month instalment plans as well as free consultations for low-income and precarious workers.
+            </p>
+
+            <footer>
+                <p>
+                    ©BRICKSxMORTAR, inc. 2018-2020 // 1.888.708.9950 // 
+                    <a href="mailto:info@bricksxmortar.com" class="footer">info@bricksxmortar.com</a>
+                </p>
+            </footer>
+            
+        </div>
+    </body>
+</html>

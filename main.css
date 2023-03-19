@@ -1,0 +1,187 @@
+body {
+    background-color: black; color:white; 
+    background-image: url(images/BRICKSxMORTAR_wallpaper.jpg);
+    background-size: 200px auto;
+    background-position: center;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1.2em;
+} 
+#banner {
+    width: 100%; height: auto;
+    background-color: black;
+    position: fixed;
+    top: 0; right: 0; left: 0;
+    border-bottom: 1px solid #fff;
+    z-index: +1;
+}
+#bgToggle {
+    width: 20%; height: auto;
+    position: absolute;
+    top: 0em; left: 1em;
+}
+#bgToggle a:link, #bgToggle a:visited {
+    color: #fff;
+    font-size: 0.75em;
+    font-family: "Helvetica", Arial, sans-serif;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+#bgToggle a:hover, #bgToggle a:active {
+    border-bottom: 2px dotted #fff;
+    font-weight: bold;
+}
+#logo {
+    width: 60%; height: auto;
+    max-width: 500px;
+    margin: auto;
+    display: block;
+    padding: 1em;
+}
+#slick {
+    width: 50%; height: auto;
+    min-width: 200px; max-width: 750px;
+    float: right;
+    margin-left: 2em;
+    margin-bottom: 0.5em;
+}
+.slider {
+    width: 100%; height: auto;
+}
+#pinkkimono {
+    width: 50%; height: auto;
+    min-width: 300px; max-width: 650px;
+    margin: 1em;
+    float: left;
+}
+#wrapper {
+    width: 60%; height: auto;
+    margin: auto; padding: 1em;
+    background-color: black;
+    position: relative;
+    top: 4.5em;
+    z-index: 0;
+    transition: color 1s, background 1s ease-in;
+}
+#wrapper:target {
+    background-color: white;
+    color: black;
+}
+header {
+    color: black;
+    width: 100%; height: auto;
+    margin-bottom: 3em;
+    position: relative;
+}
+header p {
+    cursor: pointer;
+    background-color: aquamarine; 
+    color: black;
+    font-weight: bold;
+    width: 99%; height: auto;
+    padding-left: 1%;
+    position: relative;
+    z-index: +3;
+    transition: all 0.5s;
+}
+header:hover p {
+    cursor: pointer;
+    color: magenta;
+    letter-spacing: 24px;
+}
+.slideDown {
+    margin-top: -1.5em;
+}
+nav {
+    width: 100%; height: auto;
+    text-align: center;
+    padding: 1em 0em;
+    margin-top: -30em;
+    background: aquamarine;
+    transition: margin-top 0.25s ease-in-out;
+}
+a.menu:link, 
+a.menu:visited {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+}
+a.menu:hover, 
+a.menu:active {
+    text-decoration: none;
+    color: magenta;
+}
+footer {
+    background-color: #F3F6ED;
+    color: black;
+    width: 60%;height: auto;
+    margin: 2em auto 0em auto;
+    padding-top: .25em; padding-bottom: .25em;
+    opacity: 0.7;
+    transition: opacity 1s;
+    clear: both;
+}
+footer:hover {
+    opacity: 1.0;
+}
+footer p {
+    text-align: center;
+    font-size: 0.8em;
+}
+a.footer:link, 
+a.footer:visited {
+    color: magenta;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 1s, background 1s;
+}
+a.footer:hover, a.footer:active {
+    background-color: aquamarine;
+    color: black;
+}
+.magenta {
+    color: magenta;
+}
+.agenda {
+    font-family: Agenda;
+    font-size: 1.8em;
+}
+@font-face {
+    font-family: 'Agenda';
+    src: url('type/w95fa.woff') format('woff'),
+    url('type/agenda_medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@keyframes strobe {
+    0% {color: floralwhite}
+    50% {color: magenta}
+    100% {color: white}
+}
+.strobe {
+    animation: strobe 3s ease-out 1s infinite 
+}
+#accessBtn {
+    width: 40px; height: auto;
+    position: absolute;
+    top: 1em; left: 1em;
+    transition: transform 0.5s;
+}
+#accessBtn:hover {
+    cursor: pointer;
+    transform: scale(1.5, 1.5);
+}
+.modal {
+    color: black;
+}
+#bigText {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.4em;
+}
+#biggerText {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.8em;
+}
+#bigText:hover, #biggerText:hover, #inverse:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}

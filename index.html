@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>BRICKSxMORTAR: Homepage</title>
+        <meta charset="utf-8" lang="en"/> 
+        <meta name="author" content="Justine Magbitang"/>
+        <meta name="description" content="A Toronto fashion studio changing the world one garment at a time!"/>
+        <link href="main.css" type="text/css" rel="stylesheet" media="all"/>
+        
+        <!--  JQUERY   -->
+        <script type="text/javascript" src="scripts/jquery-3.6.3.min.js"></script>
+        <script type="text/javascript" src="scripts/jquery-ui-1.13.2/jquery-ui.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("header p").click(function() {
+                    $("nav").toggleClass("slideDown");
+                });
+                $("#slick").slick({
+                    autoplay: true,
+                    autoplaySpeed: 3000,
+                    infinite: true,
+                    fade: true,
+                    dots: true,
+                    
+                });
+                $("#bigText").click(function() {
+                    $("body").css("fontSize", "1.4em"); 
+                });
+                $("#biggerText").click(function() {
+                    $("body").css("fontSize", "1.8em");
+                });
+                $("#inverse").click(function() {
+                    $("#wrapper").css("background-color", "white");
+                    $("#wrapper").css("color", "black");
+                });
+            });
+            $(window).scroll(function() {
+                $("header").stop().animate({
+                    top: $(document).scrollTop()
+                }, 'slow');
+            });
+        </script>
+        
+        <!--  SLICK   -->
+        <script src="scripts/slick/slick.js"></script>
+        <link href="scripts/slick/slick-theme.css" rel="stylesheet" media="all">
+        <link href="scripts/slick/slick.css" rel="stylesheet" media="all">
+        
+        <!--  MODAL WINDOW   -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    </head>
+    
+    <body>
+        <div id="banner">
+            <a href="#accessibility" rel="modal:open">
+                <img id="accessBtn" src="images/accessBtn.png">
+            </a>
+            <img id="logo" src="images/BRICKSxMORTAR_logo.png" alt="Bricks and Mortar logo"/>
+        </div>
+        
+        <div id="wrapper">
+            <header>
+                <p>menu</p>
+                <nav>
+                    <a class="menu" href="faq.html" target="_self">F.A.Q.</a><br/>
+                    <a class="menu" href="story.html" target="_self">OUR STORY</a><br/>
+                    <a class="menu" href="#" target="_self">OUR SERVICES</a><br/>
+                    <a class="menu" href="#" target="_self">LOCATIONS</a><br/>
+                </nav>
+            </header> 
+               
+            <p>
+                <span class="magenta agenda strobe">The mission of BRICKSxMORTAR is to transform how Canadians think about fashion.</span>
+                
+                <div id="slick">
+                    <div><img class="slider" src="images/aqua-androgynous.jpg"></div>
+                    <div><img class="slider" src="images/bandmate-blouses.jpg"></div>
+                    <div><img class="slider" src="images/roses-vest.jpg"></div>
+                    <div><img class="slider" src="images/sequins-and-stones.jpg"></div>
+                </div>
+                
+                    <br/><br/>
+                For too long consumers have been forced to fit into a mould of one kind or another—assigned a size on an arbitrary scale of unrealistic and unhealthy beauty and body standards. In an over-sexualized and Photoshopped fashion market, we offer a different kind of clothing philosophy.
+                    <br/><br/>
+                
+                <img id="pinkkimono" src="images/kimono-and-shorts.jpg"/>
+                
+                BRICKSxMORTAR strives to connect with the individual and to consult and create custom clothing for them with them in a collaborative manner. By doing so, our fashion studio endeavours to change consumers' perceptions of the current fashion landscape as well as their own views about their bodies and their fashion choices.
+                    <br/><br/>
+                What does it feel like to wear something especially  made for one's body rather than fitting one's body into a predetermined shape? We aim to answer this question a million times over as we help every client move towards a more comfortable version of themselves.
+            </p>
+            
+            <footer>
+                <p>
+                    ©BRICKSxMORTAR, inc. 2018-2020 // 1.888.708.9950 // 
+                    <a href="mailto:info@bricksxmortar.com" class="footer">info@bricksxmortar.com</a>
+                </p>
+            </footer>
+            
+            <div>
+                <div id="accessibility" class="modal">
+                    <h3>ACCESSIBILITY FEATURES</h3>
+                    <p>Change default text size:
+                        <span id="bigText">Aa</span>
+                        <span id="biggerText">Aa</span>
+                    </p>
+                    <p id="inverse">Inverse text and background colour</p>
+                </div>
+            </div>
+        
+    </body>
+</html>

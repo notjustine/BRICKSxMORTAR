@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>BRICKSxMORTAR: Our Story</title>
+        <meta charset="utf-8" lang="en"/> 
+        <meta name="author" content="Justine Magbitang"/>
+        <meta name="keywords" description="fashion, custom clothing, Toronto, gender diversity, story, about us, history, origin story"/>
+        <meta name="description" content="THe story of our shop and mission."/>
+        <link href="main.css" type="text/css" rel="stylesheet" media="all"/>
+        <script type="text/javascript" src="scripts/jquery-3.6.3.min.js"></script>
+        <script type="text/javascript" src="scripts/jquery-ui-1.13.2/jquery-ui.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("header p").click(function() {
+                    $("nav").toggleClass("slideDown");
+                });
+            });
+            $(window).scroll(function() {
+                $("header").stop().animate({
+                    top: $(document).scrollTop()
+                }, 'slow');
+            });
+        </script>
+    </head>
+    
+    <body>
+        <div id="banner">
+            <p id="bgToggle">
+                <a href="#wrapper">Switch Text to Black on White</a>
+            </p>
+            <img id="logo" src="images/BRICKSxMORTAR_logo.png" alt="Bricks and Mortar logo"/>
+        </div>
+        
+        <div id="wrapper">
+            <header>
+                <p>menu</p>
+                <nav>
+                    <a class="menu" href="index.html" target="_self">OUR MISSION</a><br/>
+                    <a class="menu" href="faq.html" target="_self">F.A.Q.</a><br/>
+                    <a class="menu" href="#" target="_self">OUR SERVICES</a><br/>
+                    <a class="menu" href="#" target="_self">LOCATIONS</a><br/>
+                </nav>
+            </header>
+            
+            <center>
+                <span class="magenta agenda strobe">OUR STORY</span> 
+            </center>
+            
+            <br>
+            
+            <center>
+                <video width = "60%" height = "auto" controls mute>
+                    <source src = "video/threading.mp4" type = "video/mp4"/>
+                    <source src = "video/threading.ogv" type = "video/ogg"/>
+                    <source src = "video/threading.webm" type = "video/webm"/>
+                </video>
+            </center>
+            
+            <h3>Where it all started</h3>
+            <p>
+                Aliquam vel odio magna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean laoreet urna eget dui rutrum tincidunt. Maecenas elementum, ante vel varius faucibus, elit eros faucibus diam, vel rutrum lacus sem eget velit. Praesent posuere vel tellus aliquam pulvinar. Curabitur sed pulvinar urna, et commodo mi. Praesent pulvinar, est id porta scelerisque
+            </p>
+            
+            <h3>Finding a common space (physically + philosophically)</h3>
+            <p>
+                Etiam magna quam, condimentum ac ipsum ut, hendrerit vehicula quam. Integer ac dapibus ipsum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut posuere a ex et blandit. Proin malesuada felis turpis, a dignissim urna aliquam at. Nullam cursus ullamcorper sapien quis pellentesque. Morbi porttitor egestas massa at lobortis. Donec fermentum neque a augue vulputate venenatis. Donec auctor tempor suscipit. Fusce tortor tellus, eleifend eget mi nec, dapibus gravida turpis. Etiam blandit suscipit lorem vitae consectetur. Suspendisse commodo lacinia ultricies.
+            </p>
+ 
+            <audio autoplay loop controls>
+                <source src = "audio/BBNG_Camel.mp3" type = "audio/mp3"/>
+                <source src = "audio/BBNG_Camel.ogg" type = "audio/ogg"/>
+                <source src = "audio/BBNG_Camel.wav" type = "audio/wav"/>
+            </audio>
+            
+            <footer>
+                <p>
+                    ©BRICKSxMORTAR, inc. 2018-2020 // 1.888.708.9950 // 
+                    <a href="mailto:info@bricksxmortar.com" class="footer">info@bricksxmortar.com</a>
+                </p>
+            </footer>
+        
+        </div>
+        
+    </body>
+</html>
