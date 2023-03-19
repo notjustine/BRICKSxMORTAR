@@ -95,7 +95,7 @@ nav {
     width: 100%; height: auto;
     text-align: center;
     padding: 1em 0em;
-    margin-top: -30em;
+    margin-top: -60em;
     background: aquamarine;
     transition: margin-top 0.25s ease-in-out;
 }
@@ -184,4 +184,8 @@ a.footer:hover, a.footer:active {
 #bigText:hover, #biggerText:hover, #inverse:hover {
     cursor: pointer;
     text-decoration: underline;
+}
+h3:hover {
+    cursor: pointer;
+    background-color: cyan;
 }

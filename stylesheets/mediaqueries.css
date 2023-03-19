@@ -1,0 +1,17 @@
+@media screen and (max-width: 640px) {
+    .floatRight, .floatLeft {
+        float: none;
+    }
+    .slick, #pinkkimono {
+        display: block;
+        width: 95%;
+        min-width: 95%;
+        margin: auto;
+    }
+    #wrapper {
+        top: 2em;
+    }
+    header p {
+        display: none;
+    }
+}
