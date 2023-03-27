@@ -3,13 +3,17 @@
 <html>
     <head>
         <title>BRICKSxMORTAR: Our Story</title>
+        
+        <!--  META  -->
         <meta charset="utf-8" lang="en"/> 
         <meta name="author" content="Justine Magbitang"/>
+        <meta name="description" content="The story of our shop and mission."/>
         <meta name="keywords" description="fashion, custom clothing, Toronto, gender diversity, story, about us, history, origin story"/>
-        <meta name="description" content="THe story of our shop and mission."/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <!--  CSS  -->
         <link href="main.css" type="text/css" rel="stylesheet" media="all"/>
+        <link href="stylesheets/story.css" type="text/css" rel="stylesheet" media="all"/>
         <link href="stylesheets/mediaqueries.css" rel="stylesheet" media="all"/>
         
         <!--  JQUERY  -->
@@ -20,6 +24,10 @@
                 $("header p").click(function() {
                     $("nav").toggleClass("slideDown");
                 });
+                $("#hamburger").click(function() {
+                    $(this).toggleClass("change");
+                    $("nav").toggleClass("slideDownFurther");
+                });
             });
             $(window).scroll(function() {
                 $("header").stop().animate({
@@ -27,14 +35,32 @@
                 }, 'slow');
             });
         </script>
+        
+        <!--  REGULAR JS  -->
+
     </head>
     
     <body>
         <div id="banner">
-            <p id="bgToggle">
-                <a href="#wrapper">Switch Text to Black on White</a>
-            </p>
+            
+            <div id="hamburger">
+                <div id="bar1"></div>
+                <div id="bar2"></div>
+                <div id='bar3'></div>
+            </div>
+            
+            <audio id="audioButton" loop>
+                <source src = "audio/BBNG_Camel.mp3" type = "audio/mp3"/>
+                <source src = "audio/BBNG_Camel.ogg" type = "audio/ogg"/>
+                <source src = "audio/BBNG_Camel.wav" type = "audio/wav"/>
+            </audio>
+            
+            <div id="volume">
+                <img id="volToggle" src="images/volumeOff.png" onclick="toggleVolume();">
+            </div>
+            
             <img id="logo" src="images/BRICKSxMORTAR_logo.png" alt="Bricks and Mortar logo"/>
+            
         </div>
         
         <div id="wrapper">
@@ -48,35 +74,23 @@
                 </nav>
             </header>
             
-            <center>
-                <span class="magenta agenda strobe">OUR STORY</span> 
-            </center>
+            <h1>OUR STORY</h1>
             
-            <br>
+            <video controls mute>
+                <source src = "video/threading.mp4" type = "video/mp4"/>
+                <source src = "video/threading.ogv" type = "video/ogg"/>
+                <source src = "video/threading.webm" type = "video/webm"/>
+            </video>
             
-            <center>
-                <video width = "60%" height = "auto" controls mute>
-                    <source src = "video/threading.mp4" type = "video/mp4"/>
-                    <source src = "video/threading.ogv" type = "video/ogg"/>
-                    <source src = "video/threading.webm" type = "video/webm"/>
-                </video>
-            </center>
-            
-            <h3>Where it all started</h3>
+            <p class="agenda">Where it all started</p>
             <p>
                 Aliquam vel odio magna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean laoreet urna eget dui rutrum tincidunt. Maecenas elementum, ante vel varius faucibus, elit eros faucibus diam, vel rutrum lacus sem eget velit. Praesent posuere vel tellus aliquam pulvinar. Curabitur sed pulvinar urna, et commodo mi. Praesent pulvinar, est id porta scelerisque
             </p>
             
-            <h3>Finding a common space (physically + philosophically)</h3>
+            <p class="agenda">Finding a common space (physically + philosophically)</p>
             <p>
                 Etiam magna quam, condimentum ac ipsum ut, hendrerit vehicula quam. Integer ac dapibus ipsum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut posuere a ex et blandit. Proin malesuada felis turpis, a dignissim urna aliquam at. Nullam cursus ullamcorper sapien quis pellentesque. Morbi porttitor egestas massa at lobortis. Donec fermentum neque a augue vulputate venenatis. Donec auctor tempor suscipit. Fusce tortor tellus, eleifend eget mi nec, dapibus gravida turpis. Etiam blandit suscipit lorem vitae consectetur. Suspendisse commodo lacinia ultricies.
             </p>
- 
-            <audio autoplay loop controls>
-                <source src = "audio/BBNG_Camel.mp3" type = "audio/mp3"/>
-                <source src = "audio/BBNG_Camel.ogg" type = "audio/ogg"/>
-                <source src = "audio/BBNG_Camel.wav" type = "audio/wav"/>
-            </audio>
             
             <footer>
                 <p>
@@ -87,5 +101,20 @@
         
         </div>
         
+        <script>
+            var clip = document.getElementsByTagName("audio")[0];
+            var vol = document.getElementById("volToggle");
+            
+            function toggleVolume() {
+                
+                if (clip.paused){
+                    clip.play();
+                    volToggle.src = "images/volumeOn.png";
+                } else {
+                    clip.pause();
+                    volToggle.src = "images/volumeOff.png";
+                }
+            }
+        </script>
     </body>
 </html>

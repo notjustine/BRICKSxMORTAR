@@ -3,9 +3,12 @@
 <html>
     <head>
         <title>BRICKSxMORTAR: Homepage</title>
+        
+        <!--  META  -->
         <meta charset="utf-8" lang="en"/> 
         <meta name="author" content="Justine Magbitang"/>
         <meta name="description" content="A Toronto fashion studio changing the world one garment at a time!"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <!--  CSS  -->
         <link href="main.css" type="text/css" rel="stylesheet" media="all"/>
@@ -25,7 +28,6 @@
                     infinite: true,
                     fade: true,
                     dots: true,
-                    
                 });
                 $("#bigText").click(function() {
                     $("body").css("fontSize", "1.4em"); 
@@ -36,6 +38,10 @@
                 $("#inverse").click(function() {
                     $("#wrapper").css("background-color", "white");
                     $("#wrapper").css("color", "black");
+                });
+                $("#hamburger").click(function() {
+                    $(this).toggleClass("change");
+                    $("nav").toggleClass("slideDownFurther");
                 });
             });
             $(window).scroll(function() {
@@ -60,6 +66,12 @@
             <a href="#accessibility" rel="modal:open">
                 <img id="accessBtn" src="images/accessBtn.png">
             </a>
+            <div id="hamburger">
+                <div id="bar1"></div>
+                <div id="bar2"></div>
+                <div id='bar3'></div>
+            </div>
+            
             <img id="logo" src="images/BRICKSxMORTAR_logo.png" alt="Bricks and Mortar logo"/>
         </div>
         

@@ -2,16 +2,26 @@
     .floatRight, .floatLeft {
         float: none;
     }
-    .slick, #pinkkimono {
+    #slick, #pinkkimono {
         display: block;
         width: 95%;
         min-width: 95%;
-        margin: auto;
+        margin: auto auto 1em auto;
     }
     #wrapper {
         top: 2em;
     }
     header p {
+        display: none;
+    }
+    #audioButton {
+        top: 1.5em;
+        margin-left: 75%;
+    }
+}
+
+@media screen and (min-width: 641px) {
+    #hamburger {
         display: none;
     }
 }

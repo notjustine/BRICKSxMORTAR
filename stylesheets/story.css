@@ -1,0 +1,8 @@
+video {
+    width: 100%; height: auto;
+}
+#audioButton {
+    width: 35px; height: 35px;
+    position: absolute;
+    top: 2em; left: 10%;
+}

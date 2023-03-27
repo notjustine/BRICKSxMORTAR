@@ -91,12 +91,16 @@ header:hover p {
 .slideDown {
     margin-top: -1.5em;
 }
+.slideDownFurther {
+    margin-top: 3em;
+}
 nav {
     width: 100%; height: auto;
     text-align: center;
     padding: 1em 0em;
     margin-top: -60em;
     background: aquamarine;
+    position: absolute;
     transition: margin-top 0.25s ease-in-out;
 }
 a.menu:link, 
@@ -113,7 +117,8 @@ a.menu:active {
 footer {
     background-color: #F3F6ED;
     color: black;
-    width: 60%;height: auto;
+    width: 60%; height: auto;
+    min-width: 300px;
     margin: 2em auto 0em auto;
     padding-top: .25em; padding-bottom: .25em;
     opacity: 0.7;
@@ -163,12 +168,27 @@ a.footer:hover, a.footer:active {
 #accessBtn {
     width: 40px; height: auto;
     position: absolute;
-    top: 1em; left: 1em;
+    top: 1em; right: 1em;
     transition: transform 0.5s;
 }
 #accessBtn:hover {
     cursor: pointer;
-    transform: scale(1.5, 1.5);
+    transform: scale(1.25, 1.25);
+}
+#volume {
+    width: 50px; height: 50px;
+    position: absolute;
+    top: 1em; right: 1em;
+    transition: all 0.5s;
+}
+#volume:hover {
+    cursor: pointer;
+    background-color: magenta;
+    border-radius: 25px;
+}
+#volToggle {
+    width: 40px; height: auto;
+    margin: 7.5px auto auto 5px;
 }
 .modal {
     color: black;
@@ -187,5 +207,30 @@ a.footer:hover, a.footer:active {
 }
 h3:hover {
     cursor: pointer;
-    background-color: cyan;
+    background-color: aquamarine;
 }
+#hamburger {
+    position: absolute;
+    top: 1.25em; left: 7%;
+}
+#hamburger:hover {
+    cursor: pointer;
+}
+#bar1, #bar2, #bar3 {
+    width: 35px; height: 5px;
+    margin: 6px auto 6px auto;
+    background-color: aquamarine;
+    transition: all 0.5s;
+}
+.change #bar1 {
+    -webkit-transform: rotate(-45deg) translate(-8px, 8px);
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+.change #bar2 {
+    opacity: 0;
+}
+.change #bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
